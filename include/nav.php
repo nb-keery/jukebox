@@ -1,11 +1,12 @@
 <nav>
 	<i class="fa fa-bars"></i>
 	<ul>
-		<li><i class="fa fa-home"></i><span>Accueil</span></li>
-		<li><i class="fa fa-music"></i><span>Musique</span></li>
-		<li><i class="fa fa-star"></i><span>Event</span></li>
-		<li><i class="fa fa-headphones"></i><span>Album</span></li>
-		<li><i class="fa fa-comments"></i><span>Forum</span></li>
-		<li><i class="fa fa-info-circle"></i><span>Contact</span></li>
+		<a href="index.php?pg=accueil"><li>Accueil</li></a>
+		<a href="index.php?pg=musique"><li>Musique</li></a>
+		<a href="index.php?pg=event"><li>Event</li></a>
+		<li class="title">Jukebox</li>
+		<a href="index.php?pg=album"><li>Album</li></a>
+		<a href="index.php?pg=forum"><li>Forum</li></a>
+		<a href="index.php?pg=contact"><li>Contact</li></a>
 	</ul>
 </nav>

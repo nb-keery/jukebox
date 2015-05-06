@@ -1,6 +1,4 @@
-<?php  include('include/nav.php'); ?>
-
-<h1>Jukebox</h1>
+<h1 class="title">Jukebox</h1>
 <p>Écoutez et partagez toutes vos musiques préférées sur notre jukebox et venez y découvir les meilleurs musiques du moment</p>
 
 <div class="controleur">

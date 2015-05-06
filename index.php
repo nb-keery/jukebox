@@ -15,6 +15,6 @@
 	else:
 		$page = "accueil.php";
 	endif;
-	
+	include('include/nav.php');
 	include('layout/'.$page);
 	require("footer.html");
