@@ -13,7 +13,7 @@
 body, html
 {
 	margin: 0px; padding: 0px;
-	background: url("../img/background.jpg") no-repeat center fixed;
+	background: url("../img/accueil.jpg") no-repeat center fixed;
 	background-size: cover;
 	color: white;
 	font-family: champ;
@@ -23,6 +23,7 @@ ul
 {
 	padding: 0px;
 	list-style: none;
+	margin: 0px;
 }
 
 a
@@ -47,31 +48,37 @@ nav > i
 	position: absolute;
 	color: rgb(91, 115, 21);
 	font-size: 33px;
-	top: 5%; left: 25px;
+	top: 5%; left: 3%;
 }
 
-nav > i:hover, nav > ul > a > li:hover
+nav > i:hover, nav ul > li:hover > a, #music > div > h2
 {
 	color: rgb(133, 165, 39);
 }
 
-nav > ul
+nav ul
 {
 	display: inline-block;
 	margin: 0 auto;
 	width: 100%;
+	background-color: black;
 }
 
-nav > ul > a > li
+nav ul > li
 {
 	display: inline-block;
-	font-size: 19px;
+	font-size: 20px;
+	padding: 2% 2% 2% 3%;
+	width: 50px;
+	position: relative;
+}
+nav ul > li > a, nav ul > li:nth-child(4):hover > a
+{
 	color: white;
-	padding: 2% 25px 2% 25px;
-	width: 8%;
+	padding: 15%;
 }
 
-nav > ul > li:nth-child(4), nav > ul > li:nth-child(4):hover
+nav ul > li:nth-child(4)
 {
 	font-size: 30px;
 	width: 110px;
@@ -81,27 +88,40 @@ nav > ul > li:nth-child(4), nav > ul > li:nth-child(4):hover
 	display: inline-block;
 }
 
+nav ul > li:nth-child(4):hover
+{
+	color: white;
+}
 
 
 
 
-/*_______________________________________________________________ : Page d'accueila  */
+
+/*_______________________________________________________________ : Page d'accueil  */
+
+
 .title
 {
 	font-family: lcam; font-size: 100px;
 	text-align: center;
-	margin: 140px auto 0px auto;
+	margin: 57px auto 0px auto;
 	background-color: rgba(91, 115, 21, 0.8);
 	padding: 1% 2%;
-	width: 35%;
+	width: 500px;
 	letter-spacing: 0.09em;
 	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
 }
 
-p
+#jb
+{
+	margin-top: 140px;
+}
+
+.title + p
 {
 	text-align: center;
 	font-size: 15px;
+	margin: 0px 3px;
 }
 
 .controleur
@@ -115,30 +135,286 @@ p
 	text-align: center;
 }
 
-.controleur > i:first-child, i:nth-child(2)
+.controleur > li:first-child, .controleur > li:nth-child(2)
 {
 	padding: 5px 7px;
-	/*border-radius: 15px; border: 1.5px solid rgb(150, 150, 150);*/
 	margin-left: 3px;
 }
 
-.controleur > i:nth-child(4), .controleur > i:last-child
+.controleur > li:nth-child(4), .controleur > li:last-child
 {
 	font-size: 16px;
 }
 
-.controleur > div 
+.controleur > li:nth-child(3), .controleur > li:nth-child(5) 
 {
-	width: 50%;
-	height: 8px;
+	width: 50%; height: 8px;
 	display: inline-block;
 	background-color: rgb(150, 150, 150);
 	margin: 0px 10px;
 }
 
-.controleur > div:nth-child(5)
+.controleur > li:nth-child(5)
 {
 	width: 6%;
 	height: 4px;
 	margin: 3px 3px;
+}
+
+
+/*_______________________________________________________________ : Page musique */
+#music
+{
+	background-color: rgb(19, 19, 19);
+	position: absolute;
+	bottom: 0px; left: 0px; right: 0px;
+	padding: 22px 0px;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+#music > *
+{
+	text-align: left;
+}
+
+#music > div:first-child
+{
+	display: inline-block;
+	width: 270px;
+	vertical-align: top;
+}
+
+#music > div > h2
+{
+	font-size: 32px;
+	margin: 0px;
+}
+
+#music > div > p
+{
+	font-size: 12px;
+}
+
+#music > div > button
+{
+	padding: 8px 15px;
+	color: white;
+	background-color: rgb(133, 165, 39);
+	border: none;
+}
+
+
+
+#music > div:nth-child(2)
+{
+	width: 14%; height: 160px;
+	border: 1px solid rgb(150, 150, 150);
+	display: inline-block;
+	margin: 0px 4%;
+}
+
+#music > div:nth-child(2) > img
+{
+	width: 100%; height: 100%;
+}
+
+#music > div:nth-child(3)
+{
+	background-color: rgb(33, 33, 33);
+	width: 33%;
+	display: inline-block;
+	margin-top: -105px;
+	vertical-align: top;
+	color: rgb(150, 150, 150);
+	border: 1px solid rgb(51, 51, 51);
+}
+
+#music > div:nth-child(3) > ul:first-child
+{
+	border-bottom: 1px solid rgb(19, 19, 19);
+	padding: 5% 15px;
+}
+
+#music > div:nth-child(3) > ul:first-child > li
+{
+	display: inline-block;
+}
+
+#music > div:nth-child(3) > ul:last-child > li
+{
+	border-bottom: 1px solid rgb(19, 19, 19);
+	margin: 0px 25px;
+	font-size: 14px;
+	padding: 10px 0px;
+}
+
+#music > div:nth-child(3) > ul:last-child > li:last-child
+{
+	border-bottom: none;
+}
+
+#music > div:nth-child(3) > ul:last-child > li > i
+{
+	margin-right: 20px;
+	font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query */
+@media screen and (max-width: 1180px)
+{
+	/*________________________ Musique */
+	#music > div:nth-child(3) > ul:last-child > li
+	{
+	padding: 10px 0px;
+	font-size: 14px;
+	}
+
+	#music > div:nth-child(3)
+	{
+	margin-top: -105px!important;
+	}
+}
+
+@media screen and (max-width: 700px)
+{
+	/*________________________ Nav */
+	nav ul > li:nth-child(4)
+	{
+		display: block;
+		margin: 2px auto;
+	}
+
+	nav ul > li 
+	{
+		font-size: 12px;
+		padding: 2px;
+	}
+
+	/*________________________ Musique */
+	#music > div:first-child 
+	{
+		width: 60px;
+	}
+
+	#music > div:first-child > h2, #music > div:first-child > p
+	{
+		display: none;
+	}
+	
+	#music > div:first-child > button
+	{
+		position: absolute;
+		bottom: 30px; left: 33%;
+	}
+
+	#music > div:nth-child(2)
+	{
+		width: 190px; height: 190px;
+		vertical-align: top;
+	}
+}
+
+@media screen and (max-width: 525px)
+{
+	.title
+	{
+		width: 300px;
+	}
+
+	/*________________________ Musique */
+	#music > div:nth-child(3) > ul:last-child > li 
+	{
+	  	padding: 12px 0px;
+	  	font-size: 10px;
+	}
+
+	#music > div:nth-child(3) > ul:first-child > li i
+	{
+		font-size: 10px;
+	}
+}
+
+@media screen and (max-width: 450px)
+{
+	/*________________________ Musique */
+	#music > div:nth-child(3)
+	{
+		width: 90%;
+		margin-top: 10px!important;
+	}
+
+	#music > div:nth-child(3) > ul:last-child > li 
+	{
+ 	 	padding: 10px 0px;
+ 	 	margin: 0px 10px;
+ 	}
+
+ 	#music > div:nth-child(3) > ul:last-child > li > i
+	{
+ 		font-size: 12px;
+ 	}
+
+ 	#music > div:nth-child(2)
+ 	{
+ 		width: 60px; height: 60px;
+ 		margin: 0px 0px 0px 20px;
+ 	}
+
+ 	#music > div:first-child
+ 	{
+ 		width: 30%;
+ 	}
+
+ 	#music > div:first-child > button
+ 	{
+ 		position: initial;
+ 	}
+}
+
+
+@media screen and (max-width: 400px)
+{
+	/*________________________ Nav */
+	nav ul
+	{
+		background-color: rgba(0, 0, 0, 0.67)!important;
+	}
+
+	nav > i
+	{
+		font-size: 19px;
+		top: 2%; left: 8px;
+	}
+
+	nav ul > li:nth-child(4)
+	{
+		display : none;
+	}
+
+	nav ul > li
+	{
+		display: block;
+		margin: 0 auto;
+	}
+
+	.title
+	{
+		width: 75%!important;
+		font-size: 2.7em!important;
+	}
 }

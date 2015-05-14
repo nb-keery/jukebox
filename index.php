@@ -6,7 +6,7 @@
 	extract($_GET);
 	if (!isset($_GET['pg'])) $pg ="accueil";
 
-	if(isset($_SESSION[USER]['pseudo'])):
+	if(isset($_GET)):
 		if (file_exists('layout/'.$pg.'.php')) {
 			$page = $pg.".php";
 		}else{
@@ -15,6 +15,5 @@
 	else:
 		$page = "accueil.php";
 	endif;
-	include('include/nav.php');
 	include('layout/'.$page);
 	require("footer.html");

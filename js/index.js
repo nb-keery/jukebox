@@ -1,13 +1,12 @@
 $(document).ready(function(){
 
-	$('nav > ul').hide();
+	$('nav > #showNav > ul').hide();
 	$(document).on("click", "nav > i", function(){
-		var nav = $("nav > ul").is(":visible");
+		var nav = $("nav > #showNav > ul").is(":visible");
 		if (nav) {
-			$("nav > ul").slideToggle();
+			$("nav > #showNav > ul").slideToggle();
 		}else{
-			$("nav").css("background-color", "black");
-			$("nav > ul").slideToggle();
+			$("nav > #showNav > ul").slideToggle();
 		};
 	});
 });
