@@ -1,0 +1,28 @@
+<section id="album">
+	<div>
+		<h2>POPULAR ALBUMS</h2>
+		<ul>
+		<?php for ($i=0; $i < 5 ; $i++) { 
+			echo "<li>
+				<img src='img/dg.jpg'>
+				<div>
+					<h5>Nom de l'album</h5>
+					<span>Chanteur</span>
+				</div>
+			</li>";
+		} ?>
+		</ul>
+		<div><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></div>
+	</div>
+
+	<div>
+		<h2>LATEST ALBUMS</h2>
+		<ul>
+			<?php for ($i=0; $i < 12 ; $i++) { 
+				echo "<li>
+				<img src='img/tal.jpg'>
+				</li>";
+			} ?>
+		</ul>
+	</div>
+</section>

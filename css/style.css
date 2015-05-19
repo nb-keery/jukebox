@@ -10,6 +10,13 @@
 	src: url('../font/Champagne & Limousines.ttf');
 }
 
+
+@font-face 
+{ 
+	font-family: "awesome";
+	src: url('../font/FontAwesome.otf');
+}
+
 body, html
 {
 	margin: 0px; padding: 0px;
@@ -17,6 +24,7 @@ body, html
 	background-size: cover;
 	color: white;
 	font-family: champ;
+	height: 100%;
 }
 
 ul
@@ -31,9 +39,23 @@ a
 	text-decoration: none;
 }
 
+img
+{
+	vertical-align: bottom;
+}
 
+section
+{
+	padding-top: 140px;
+	position: absolute;
+	top: 0px; left: 0px; right: 0px; bottom: 0px;
 
+}
 
+section > h1
+{
+	margin-top: 0px!important;
+}
 
 /*_______________________________________________________________ : Navigateur  */
 nav
@@ -41,6 +63,8 @@ nav
 	width: 100%;
 	height: 10%;
 	text-align: center;
+	position: relative;
+	z-index: 1;
 }
 
 nav > i
@@ -48,7 +72,7 @@ nav > i
 	position: absolute;
 	color: rgb(91, 115, 21);
 	font-size: 33px;
-	top: 5%; left: 3%;
+	top: 27%; left: 3%;
 }
 
 nav > i:hover, nav ul > li:hover > a, #music > div > h2
@@ -61,7 +85,7 @@ nav ul
 	display: inline-block;
 	margin: 0 auto;
 	width: 100%;
-	background-color: black;
+	background-color: rgba(0, 0, 0, 0.67);
 }
 
 nav ul > li
@@ -75,7 +99,7 @@ nav ul > li
 nav ul > li > a, nav ul > li:nth-child(4):hover > a
 {
 	color: white;
-	padding: 15%;
+	padding: 0% 15%;
 }
 
 nav ul > li:nth-child(4)
@@ -98,14 +122,12 @@ nav ul > li:nth-child(4):hover
 
 
 /*_______________________________________________________________ : Page d'accueil  */
-
-
 .title
 {
 	font-family: lcam; font-size: 100px;
 	text-align: center;
-	margin: 57px auto 0px auto;
-	background-color: rgba(91, 115, 21, 0.8);
+	margin: 0px auto 0px auto;
+	background-color: rgba(91, 115, 21, 0.6);
 	padding: 1% 2%;
 	width: 500px;
 	letter-spacing: 0.09em;
@@ -148,10 +170,10 @@ nav ul > li:nth-child(4):hover
 
 .controleur > li:nth-child(3), .controleur > li:nth-child(5) 
 {
-	width: 50%; height: 8px;
 	display: inline-block;
 	background-color: rgb(150, 150, 150);
 	margin: 0px 10px;
+	width: 50%; height: 8px;
 }
 
 .controleur > li:nth-child(5)
@@ -163,7 +185,13 @@ nav ul > li:nth-child(4):hover
 
 
 /*_______________________________________________________________ : Page musique */
-#music
+#musique
+{
+	background: url("../img/musique.jpg") no-repeat center fixed;
+	background-size: cover;
+}
+
+#basDePage
 {
 	background-color: rgb(19, 19, 19);
 	position: absolute;
@@ -173,30 +201,30 @@ nav ul > li:nth-child(4):hover
 	vertical-align: bottom;
 }
 
-#music > *
+#basDePage > *
 {
 	text-align: left;
 }
 
-#music > div:first-child
+#basDePage > div:first-child
 {
 	display: inline-block;
 	width: 270px;
 	vertical-align: top;
 }
 
-#music > div > h2
+#basDePage > div > h2
 {
 	font-size: 32px;
 	margin: 0px;
 }
 
-#music > div > p
+#basDePage > div > p
 {
 	font-size: 12px;
 }
 
-#music > div > button
+.button
 {
 	padding: 8px 15px;
 	color: white;
@@ -206,20 +234,20 @@ nav ul > li:nth-child(4):hover
 
 
 
-#music > div:nth-child(2)
+#basDePage > div:nth-child(2)
 {
-	width: 14%; height: 160px;
+	width: 14%;
 	border: 1px solid rgb(150, 150, 150);
 	display: inline-block;
 	margin: 0px 4%;
 }
 
-#music > div:nth-child(2) > img
+#basDePage > div:nth-child(2) > img
 {
 	width: 100%; height: 100%;
 }
 
-#music > div:nth-child(3)
+#basDePage > div:nth-child(3)
 {
 	background-color: rgb(33, 33, 33);
 	width: 33%;
@@ -230,18 +258,18 @@ nav ul > li:nth-child(4):hover
 	border: 1px solid rgb(51, 51, 51);
 }
 
-#music > div:nth-child(3) > ul:first-child
+#basDePage > div:nth-child(3) > ul:first-child
 {
 	border-bottom: 1px solid rgb(19, 19, 19);
 	padding: 5% 15px;
 }
 
-#music > div:nth-child(3) > ul:first-child > li
+#basDePage > div:nth-child(3) > ul:first-child > li
 {
 	display: inline-block;
 }
 
-#music > div:nth-child(3) > ul:last-child > li
+#basDePage > div:nth-child(3) > ul:last-child > li
 {
 	border-bottom: 1px solid rgb(19, 19, 19);
 	margin: 0px 25px;
@@ -249,18 +277,321 @@ nav ul > li:nth-child(4):hover
 	padding: 10px 0px;
 }
 
-#music > div:nth-child(3) > ul:last-child > li:last-child
+#basDePage > div:nth-child(3) > ul:last-child > li:last-child
 {
 	border-bottom: none;
 }
 
-#music > div:nth-child(3) > ul:last-child > li > i
+#basDePage > div:nth-child(3) > ul:last-child > li > i
 {
 	margin-right: 20px;
 	font-size: 16px;
 }
 
+/*_______________________________________________________________ : Event  */
+#event
+{
+	background: url("../img/event.jpg") no-repeat center fixed;
+	background-size: cover;
+}
 
+#event > h1
+{
+	width: 330px;
+}
+
+#event > ul
+{
+	margin-top: -175px;
+	text-align: center;
+	width: 100%;
+}
+
+#event > ul > li
+{
+	display: inline-block;
+	background-color: rgb(35, 35, 35);
+	position: relative;
+	width: 340px;
+}
+
+#event > ul > li:first-child, #event > ul > li:nth-child(3)
+{
+	margin: 0px 35% 20px 0px;
+}
+
+#event > ul > li > div:first-child
+{
+	width: 106px; height: 120px;
+	display: inline-block;
+}
+
+#event > ul > li > div:first-child > img
+{
+	width: 100%;
+	height: 100%;
+}
+
+#event > ul > li > div:last-child
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 230px;
+}
+
+#event > ul > li > div:last-child > *
+{
+	text-align: left;
+}
+
+#event > ul > li > div:last-child > h3
+{
+	margin: 4px 0px 3px 0px;
+}
+
+#event > ul > li > div:last-child > h4
+{
+	margin: 4px 0px 2px 0px;
+	font-size: 10px;
+}
+
+#event > ul > li > div:last-child > span
+{
+	font-size: 10px;
+	display: block;
+}
+
+#event > ul > li > div:last-child > p
+{
+	font-size: 9px;
+	margin: 0px 0px 5px 0px;
+}
+
+#event > ul > li > div:last-child > button
+{
+	font-size: 9px;
+	padding: 4px;
+	position: absolute;
+	right: 9px; bottom: 5px;
+}
+
+#event > ul > li > div:last-child > i
+{
+	color:  rgb(133, 165, 39);
+	position: absolute;
+	right: 9px; top: 5px;
+}
+
+
+#event > #basDePage
+{
+	padding: 0px;
+}
+
+#event > #basDePage > img
+{
+	width: 310px; height: 310px;
+	margin-top: -35px;
+}
+
+#eventInfo
+{
+	border: none!important;
+	vertical-align: top;
+	width: 26%!important;
+}
+
+#eventInfo > i
+{
+	text-align: center;
+	display: block;
+	font-size: 33px;
+}
+
+#eventInfo > h2
+{
+	margin: 0px 0px 5px 0px!important;
+}
+
+#eventInfo > span
+{
+	font-size: 10px;
+}
+
+#eventInfo > h3
+{
+	font-size: 16px;
+}
+
+#eventInfo > p
+{
+	height: 80px;
+	overflow: hidden;
+}
+
+/*_______________________________________________________________ : Page album */
+#album
+{
+	background: url("../img/album.jpg") no-repeat center fixed;
+	background-size: cover;
+	padding-top: 90px;
+	text-align: center;
+}
+
+#album > div
+{
+	background-color: rgba(0, 0, 0, 0.67);
+	display: inline-block;
+	vertical-align: top;
+}
+
+#album > div:first-child
+{
+	width: 13%;
+	margin-right: 30px;
+}
+
+#album > div > h2
+{
+	border-bottom: 3px solid white;
+	margin: 5px 20px;
+	font-size: 20px;
+	height: 25px;
+	overflow: hidden;
+}
+
+#album > div > div 
+{
+	background-color: rgb(91, 115, 21);
+}
+
+#album > div > div > i
+{
+	font-size: 5px;
+	margin: 0px 3px;
+	padding: 5px 0px;
+}
+
+#album > div > ul 
+{
+	margin-bottom: 7px;
+}
+
+#album > div > ul > li
+{
+	width: 80%;
+	height: 96px;
+	margin: 3px auto;
+	position: relative;
+	display: inline-block;
+}
+
+#album > div > ul > li > img
+{
+	width: 100%; height: 100%;
+}
+
+#album > div > ul > li > div
+{
+	position: absolute;
+	left: 0px; right: 0px; bottom: 0px;
+	background-color: rgba(19, 19, 19, 0.8);
+	font-size: 12px;
+}
+
+#album > div > ul > li > div > h5
+{
+	margin: 0px;
+}
+
+#album > div:last-child
+{
+	width: 42%;
+	margin-right: 30px;
+}
+
+#album > div:last-child > h2
+{
+	text-align: left;
+	width: 124px;
+}
+
+#album > div:last-child > ul > li
+{
+	width: 30%;
+	height: 125px;
+	margin: 3px 4px;
+}
+
+/*_______________________________________________________________ : Contact  */
+#contact
+{
+	background: url("../img/contact.jpg") no-repeat center fixed;
+	background-size: cover;
+}
+
+input, textarea
+{
+	background-color: rgb(8, 8, 8);
+	border: 3px solid rgb(150, 150, 150);
+	padding: 15px;
+	box-sizing: border-box;
+	color: white;
+}
+
+#contact > div
+{
+	padding: 0px;
+}
+
+#contact  p
+{
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+#contact form
+{
+	width: 70%;
+	position: relative;
+	margin: 0 auto;
+	margin: -55px auto 35px auto;
+}
+
+#contact form > input
+{
+	display: block;
+	width: 100%;
+	margin-top: 15px;
+}
+
+#contact form > textarea
+{
+	width: 68%; height: 170px;
+	max-width: 68%; max-height: 170px;
+	position: absolute;
+	right: 0px;
+}
+
+
+#contact form > div
+{
+	display: inline-block;
+	width: 30%;
+	margin-right: 2%;
+}
+
+#contact form > div > input
+{
+	display: block;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+#contact form > div > input:last-child
+{
+	margin-bottom: 0px;
+}
 
 
 
@@ -278,17 +609,51 @@ nav ul > li:nth-child(4):hover
 @media screen and (max-width: 1180px)
 {
 	/*________________________ Musique */
+
 	#music > div:nth-child(3) > ul:last-child > li
 	{
 	padding: 10px 0px;
 	font-size: 14px;
 	}
 
-	#music > div:nth-child(3)
+	#basDePage > div:nth-child(3)
 	{
 	margin-top: -105px!important;
 	}
 }
+
+@media screen and (min-width: 1070px)
+{
+	#event > ul > li > div:last-child > i
+	{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1070px)
+{
+	#event > ul > li
+	{
+		display: block;
+		margin: 5px auto 0px auto!important;
+	}
+
+	#event > ul > li > div:last-child > button
+	{
+		display: none;
+	}
+
+	#event > ul > li > div:last-child > h3
+	{
+		font-size: 14px;
+	}
+
+	#event > ul > li > div:first-child
+	{
+		height: 95px;
+	}
+}
+
 
 @media screen and (max-width: 700px)
 {
@@ -306,27 +671,90 @@ nav ul > li:nth-child(4):hover
 	}
 
 	/*________________________ Musique */
-	#music > div:first-child 
+	#basDePage > div:first-child 
 	{
 		width: 60px;
 	}
 
-	#music > div:first-child > h2, #music > div:first-child > p
+	#basDePage > div:first-child > h2, #basDePage > div:first-child > p
 	{
 		display: none;
 	}
 	
-	#music > div:first-child > button
+	#basDePage > div:first-child > button
 	{
 		position: absolute;
 		bottom: 30px; left: 33%;
 	}
 
-	#music > div:nth-child(2)
+	#basDePage > div:nth-child(2)
 	{
 		width: 190px; height: 190px;
 		vertical-align: top;
 	}
+
+	/*________________________ Event */
+	#event > #basDePage > img
+	{
+		width: 210px; height: 222px;
+	}
+
+	#eventInfo
+	{
+		height: initial;
+	}
+	#eventInfo > h2
+	{
+		font-size: 16px!important;
+	}
+
+	#eventInfo > h3
+	{
+		margin: 5px 0px 0px 0px;
+		font-size: 11px;
+	}
+
+	#eventInfo > span
+	{
+		display: none;
+	}
+
+	#eventInfo > p
+	{
+		height: 58px;
+		font-size: 9px!important;
+	}
+	/*________________________ Event */
+	#album > div
+	{
+		display: block;
+		margin: 4px 4px;
+		width: initial!important;
+		margin-right: 4px;
+	}
+
+	#album > div > h2
+	{
+		border: none;
+		width: initial!important;
+		text-align: center!important;
+	}
+
+	#album > div > ul > li
+	{
+		display: inline-block;
+		width: 18%;
+		margin: 3px 3px;
+	}
+
+
+	/*________________________ Contact */
+	#contact > h1
+	{
+		font-size: 50px;
+		width: 250px;
+	}
+
 }
 
 @media screen and (max-width: 525px)
@@ -337,13 +765,13 @@ nav ul > li:nth-child(4):hover
 	}
 
 	/*________________________ Musique */
-	#music > div:nth-child(3) > ul:last-child > li 
+	#basDePage > div:nth-child(3) > ul:last-child > li 
 	{
 	  	padding: 12px 0px;
 	  	font-size: 10px;
 	}
 
-	#music > div:nth-child(3) > ul:first-child > li i
+	#basDePage > div:nth-child(3) > ul:first-child > li i
 	{
 		font-size: 10px;
 	}
@@ -352,35 +780,35 @@ nav ul > li:nth-child(4):hover
 @media screen and (max-width: 450px)
 {
 	/*________________________ Musique */
-	#music > div:nth-child(3)
+	#basDePage > div:nth-child(3)
 	{
 		width: 90%;
 		margin-top: 10px!important;
 	}
 
-	#music > div:nth-child(3) > ul:last-child > li 
+	#basDePage > div:nth-child(3) > ul:last-child > li 
 	{
  	 	padding: 10px 0px;
  	 	margin: 0px 10px;
  	}
 
- 	#music > div:nth-child(3) > ul:last-child > li > i
+ 	#basDePage > div:nth-child(3) > ul:last-child > li > i
 	{
  		font-size: 12px;
  	}
 
- 	#music > div:nth-child(2)
+ 	#basDePage > div:nth-child(2)
  	{
  		width: 60px; height: 60px;
  		margin: 0px 0px 0px 20px;
  	}
 
- 	#music > div:first-child
+ 	#basDePage > div:first-child
  	{
  		width: 30%;
  	}
 
- 	#music > div:first-child > button
+ 	#basDePage > div:first-child > button
  	{
  		position: initial;
  	}
@@ -398,7 +826,7 @@ nav ul > li:nth-child(4):hover
 	nav > i
 	{
 		font-size: 19px;
-		top: 2%; left: 8px;
+		top: 8%; left: 8px;
 	}
 
 	nav ul > li:nth-child(4)
@@ -415,6 +843,96 @@ nav ul > li:nth-child(4):hover
 	.title
 	{
 		width: 75%!important;
-		font-size: 2.7em!important;
+		font-size: 1.9em!important;
+	}
+
+	/*__________________Event */
+	#event > ul > li > div:last-child 
+	{
+		width: initial;
+	}
+
+	#event > ul > li > div:last-child > p, #event > ul > li > div:last-child > h4
+	{
+		display: none;
+	}
+
+	#event > ul > li > div:first-child
+	{
+		width: 50px; height: 50px;
+	}
+
+	#event > ul
+	{
+		text-align: left;
+		margin-top: 5px;
+	}
+
+	#event > ul > li
+	{
+		width: 79%;
+	}
+
+	#event > #basDePage > img 
+	{
+  		width: 100px!important;
+  		height: 170px!important;
+  	}
+
+  	#eventInfo > p, #eventInfo > h3
+  	{
+  		display: none;
+  	}
+
+	#eventInfo 
+	{
+		margin-left: 5px!important;
+	}
+
+  	#eventInfo > h2
+  	{
+  		margin: 13px 0px!important;
+  		font-size: 12px!important;
+  	}
+
+  	/*_____________ALBUM */
+  	#album > div:first-child
+  	{
+  		margin: 50px 4px 0px 4px!important;
+  	}
+
+  	#album > div:last-child
+  	{
+  		margin: 10px 4px 0px 4px!important;
+  	}
+
+  	#album > div:first-child > ul > li:last-child
+  	{
+  		display: none;
+  	}
+
+}
+
+@media screen and (max-width: 250px)
+ {
+	#event > ul > li > div:last-child > h3
+	{
+		font-size: 9px;
+		margin-top: 8px;
+	}
+
+	#event > ul > li > div:last-child > span
+	{
+		display: none;
+	}
+
+	#event > ul > li > div:last-child > i
+	{
+		display: none;
+	}
+
+	#event > ul > li > div:last-child > button
+	{
+		display: block;
 	}
 }

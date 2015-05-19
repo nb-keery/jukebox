@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-	$('nav > #showNav > ul').hide();
 	$(document).on("click", "nav > i", function(){
 		var nav = $("nav > #showNav > ul").is(":visible");
 		if (nav) {
@@ -9,4 +8,13 @@ $(document).ready(function(){
 			$("nav > #showNav > ul").slideToggle();
 		};
 	});
+
+	$(window).resize(function(){
+		if ($(window).width() <= 980) {
+			$("nav > #showNav > ul").hide();
+		}else{
+			$("nav > #showNav > ul").show();
+		};
+	});
+
 });
